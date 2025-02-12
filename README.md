@@ -38,12 +38,11 @@ $ npm run test:cov
 
 #### POST Create new user
 
-```http
-  http://localhost:3000/auth/signup
-```
-
-body
 ```bash
+  http://localhost:3000/auth/signup
+
+
+  # body
   {
     "email": "email_1@company.com",
     "password": "uno"
@@ -52,12 +51,10 @@ body
 
 #### POST Signin user
 
-```http
-  http://localhost:3000/auth/signin
-```
-
-body
 ```bash
+  http://localhost:3000/auth/signin
+
+  # body
   {
     "email": "email_1@company.com",
     "password": "uno"
