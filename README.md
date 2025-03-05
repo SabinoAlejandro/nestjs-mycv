@@ -73,34 +73,50 @@ npm run typeorm migration:run
 
 #### GET Verify signed user
 
-```http
+```bash
   http://localhost:3000/auth/whoami
 ```
 
+#### GET All users
 
-#### Get all items
-
-```http
-  GET /api/items
+```bash
+  http://localhost:3000/auth
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
+#### GET Specific user
 
-#### Get item
-
-```http
-  GET /api/items/${id}
+```bash
+  http://localhost:3000/auth/1
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
+#### PATCH Update specific user
 
-#### add(num1, num2)
+```bash
+  http://localhost:3000/auth/1
+```
 
-Takes two numbers and returns the sum.
+#### DELETE Specific user
+
+```bash
+  http://localhost:3000/auth/1
+```
+
+#### GET New report
+
+```bash
+  http://localhost:3000/reports?make=ford&model=mustang&lng=0&lat=0&mileage=20000&year=1981
+```
+
+#### PATCH Approve report
+
+```bash
+    http://localhost:3000/reports/1
+
+  # body
+  {
+      "approved":true
+  }
+```
 
 ## License
 
