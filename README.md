@@ -34,6 +34,16 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Generate DB
+
+```bash
+#Generate our migrations
+npm run typeorm migration:generate migrations/initial-schema
+
+#Run our migration
+npm run typeorm migration:run
+```
+
 ## API Reference
 
 #### POST Create new user
@@ -61,7 +71,7 @@ $ npm run test:cov
   }
 ```
 
-#### Verify signed user
+#### GET Verify signed user
 
 ```http
   http://localhost:3000/auth/whoami
